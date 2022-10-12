@@ -1,0 +1,18 @@
+<script type="text/javascript">
+    RED.nodes.registerType('weatherflow-hub',{
+        category: 'config',
+        defaults: {
+            port: {value:50222,required:true,validate:RED.validators.number()},
+        },
+        label: function() {
+            return this.port;
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="weatherflow-hub">
+    <div class="form-row">
+        <label for="node-config-input-port"><i class="fa fa-bookmark"></i> Port</label>
+        <input type="text" id="node-config-input-port">
+    </div>
+</script>

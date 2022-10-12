@@ -3,4 +3,6 @@ module.exports = function (RED) {
         RED.nodes.createNode(this, config);
         var node = this;
     }
+
+    RED.nodes.registerType("weatherflow-udp", UdpListenerNode);
 }

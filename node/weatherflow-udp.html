@@ -1,12 +1,11 @@
 <script type="text/javascript">
     RED.nodes.registerType('weatherflow-udp', {
-        category: 'background',
+        category: 'WeatherFlow',
         color: '#a6bbcf',
         inputs: 0,
         outputs: 1,
         defaults: {
-            name: { value: "" },
-            port: { value: 50222 }
+            hub: { value: "", type: "weatherflow-hub" }
         },
         icon: "file.png",
         label: function () {
@@ -17,12 +16,8 @@
 
 <script type="text/html" data-template-name="weatherflow-udp">
     <div class="form-row">
-        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
-        <input type="text" id="node-input-name" placeholder="Name">
-    </div>
-    <div class="form-row">
-        <label for="node-input-port"><i class="fa fa-tag"></i> Port</label>
-        <input type="text" id="node-input-port" placeholder="Port">
+        <label for="node-input-hub"><i class="fa fa-tag"></i> Hub</label>
+        <input type="text" id="node-input-hub" placeholder="Hub">
     </div>
 </script>
 

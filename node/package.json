@@ -2,7 +2,8 @@
     "name" : "node-red-contrib-weatherflow-udp",
     "node-red" : {
         "nodes": {
-            "lower-case": "weatherflow-udp.js"
+            "weatherflow-upd": "weatherflow-udp.js",
+            "weatherflow-hub": "weatherflow-hub.js"
         }
     }
 }

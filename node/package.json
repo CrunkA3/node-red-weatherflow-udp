@@ -2,8 +2,8 @@
     "name" : "node-red-contrib-weatherflow-udp",
     "node-red" : {
         "nodes": {
-            "weatherflow-upd": "weatherflow-udp.js",
-            "weatherflow-hub": "weatherflow-hub.js"
+            "weatherflow-hub": "weatherflow-hub.js",
+            "weatherflow-rapid-wind": "weatherflow-rapid-wind.js"
         }
     }
 }

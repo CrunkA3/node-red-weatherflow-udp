@@ -28,11 +28,13 @@ module.exports = function (RED) {
         });
 
         udpClient.on('message', function (message, remote) {
-            //node.log(remote.address + ':' + remote.port + ' - ' + message);
+            if (message.type == "rapid_wind") {
+                node.emit("rapid_wind", { payload: message, remote: remote });
+            }
         });
 
         udpClient.bind({
-            address: '0.0.0.0',
+            address: config.host,
             port: config.port,
             exclusive: false
         });

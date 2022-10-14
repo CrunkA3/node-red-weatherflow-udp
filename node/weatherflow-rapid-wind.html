@@ -1,0 +1,44 @@
+<script type="text/javascript">
+    RED.nodes.registerType('weatherflow-rapid-wind', {
+        category: 'WeatherFlow',
+        color: '#a6bbcf',
+        inputs: 0,
+        outputs: 1,
+        defaults: {
+            hub: { value: "", type: "weatherflow-hub" }
+        },
+        icon: "bridge.svg",
+        label: function () {
+            return this.name || "weatherflow-rapid-wind";
+        }
+    })
+</script>
+
+<script type="text/html" data-template-name="weatherflow-rapid-wind">
+    <div class="form-row">
+        <label for="node-input-hub"><i class="fa fa-tag"></i> Hub</label>
+        <input type="text" id="node-input-hub" placeholder="Hub">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="weatherflow-rapid-wind">
+    <p>Receives rapid wind messages</p>
+    <h3>Outputs</h3>
+    <ol class="node-ports">
+        <li>Standard output
+            <dl class="message-properties">
+                <dt>payload <span class="property-type">json</span></dt>
+                <dd>the repid wind message
+                    <code>
+                        {
+                            "serial_number": "SK-00000001",
+                            "type":"rapid_wind",
+                            "hub_sn": "HB-00000001",
+                            "ob":[1493322445,2.3,128]
+                        }
+                    </code>
+                </dd>
+            </dl>
+        </li>
+    </ol>
+</script>

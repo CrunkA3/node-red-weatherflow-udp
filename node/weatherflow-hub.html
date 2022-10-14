@@ -1,10 +1,11 @@
 <script type="text/javascript">
-    RED.nodes.registerType('weatherflow-hub',{
+    RED.nodes.registerType('weatherflow-hub', {
         category: 'config',
         defaults: {
-            port: {value:50222,required:true,validate:RED.validators.number()},
+            host: { value: "0.0.0.0", required: true, validate: RED.validators.regex(/(([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])/) },
+            port: { value: 50222, required: true, validate: RED.validators.number() },
         },
-        label: function() {
+        label: function () {
             return this.port;
         }
     });
@@ -12,7 +13,16 @@
 
 <script type="text/html" data-template-name="weatherflow-hub">
     <div class="form-row">
+        <label for="node-config-input-host"><i class="fa fa-bookmark"></i> Host-IP</label>
+        <input type="text" id="node-config-input-host">
+    </div>
+    <div class="form-row">
         <label for="node-config-input-port"><i class="fa fa-bookmark"></i> Port</label>
         <input type="text" id="node-config-input-port">
     </div>
+</script>
+
+
+<script type="text/html" data-help-name="weatherflow-hub">
+    <p>UDP settings for WeatherFlow HUB</p>
 </script>

@@ -1,5 +1,7 @@
 {
     "name" : "node-red-contrib-weatherflow-udp",
+    "version": "1.0.0",
+    "author": "Michael Rohrhirsch (https://github.com/CrunkA3)",
     "node-red" : {
         "nodes": {
             "weatherflow-hub": "weatherflow-hub.js",

@@ -4,7 +4,7 @@
         "nodes": {
             "weatherflow-hub": "weatherflow-hub.js",
             "weatherflow-rapid-wind": "weatherflow-rapid-wind.js",
-            "weatherflow-observation": "weatherflow-observation.js",
+            "weatherflow-observation-tempest": "weatherflow-observation-tempest.js",
             "weatherflow-rain-start": "weatherflow-rain-start.js",
             "weatherflow-lightning-strike": "weatherflow-lightning-strike.js"
         }

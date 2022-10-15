@@ -43,5 +43,5 @@ module.exports = function (RED) {
         });
     }
 
-    RED.nodes.registerType("weatherflow-observation", UdpListenerNode);
+    RED.nodes.registerType("weatherflow-observation-tempest", UdpListenerNode);
 }

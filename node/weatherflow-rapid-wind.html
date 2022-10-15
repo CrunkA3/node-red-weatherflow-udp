@@ -1,7 +1,7 @@
 <script type="text/javascript">
     RED.nodes.registerType('weatherflow-rapid-wind', {
         category: 'WeatherFlow',
-        color: '#a6bbcf',
+        color: '#c498cd',
         inputs: 0,
         outputs: 1,
         defaults: {
@@ -9,8 +9,9 @@
         },
         icon: "bridge.svg",
         label: function () {
-            return this.name || "weatherflow-rapid-wind";
-        }
+            return this.name || "Rapid Wind";
+        },
+        paletteLabel: "Rapid Wind"
     })
 </script>
 
@@ -28,13 +29,33 @@
         <li>Standard output
             <dl class="message-properties">
                 <dt>payload <span class="property-type">json</span></dt>
-                <dd>the repid wind message
+                <dd>the repid wind observation data
                     <code>
                         {
-                            "serial_number": "SK-00000001",
+                            "utcDate":"2022-10-15T15:28:06.000Z",
+                            "windSpeed":0.88,
+                            "windDirection":189
+                        }
+                    </code>
+                </dd>   
+                <dt>originalMessage <span class="property-type">json</span></dt>
+                <dd>the rapid wind original message
+                    <code>
+                        {
+                            "serial_number":"ST-00085886",
                             "type":"rapid_wind",
-                            "hub_sn": "HB-00000001",
-                            "ob":[1493322445,2.3,128]
+                            "hub_sn":"HB-00069487",
+                            "ob":[1665847686,0.88,189]
+                        },"remote":{"address":"192.168.1.113","family":"IPv4","port":50222,"size":101},"_msgid":"b01d498c0fcb4df0"}
+                    </code>
+                </dd>
+                <dd>the remote host
+                    <code>
+                        {
+                            "address":"192.168.1.100",
+                            "family":"IPv4",
+                            "port":50222,
+                            "size":101
                         }
                     </code>
                 </dd>

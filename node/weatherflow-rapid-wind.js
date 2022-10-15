@@ -11,7 +11,17 @@ module.exports = function (RED) {
         });
 
         node.hub.on("rapid_wind", function (data) {
-            node.send(data);
+            var msg = {
+                payload: {
+                    utcDate: new Date(data.payload.ob[0] * 1000),
+                    windSpeed: data.payload.ob[1],
+                    windDirection: data.payload.ob[2]
+                },
+                originalMessage: data.payload,
+                remote: data.remote
+            };
+
+            node.send(msg);
         });
     }
 

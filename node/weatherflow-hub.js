@@ -28,8 +28,14 @@ module.exports = function (RED) {
         });
 
         udpClient.on('message', function (message, remote) {
-            if (message.type == "rapid_wind") {
-                node.emit("rapid_wind", { payload: message, remote: remote });
+            var messageText = message.toString();
+            var messageObject = JSON.parse(messageText);
+            
+            if (messageObject.type == "rapid_wind") {
+                node.emit("rapid_wind", { payload: messageObject, remote: remote });
+            }
+            else if (messageObject.type == "obs_st") {
+                node.emit("obs_st", { payload: messageObject, remote: remote });
             }
         });
 

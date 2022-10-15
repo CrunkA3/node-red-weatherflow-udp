@@ -11,17 +11,21 @@ module.exports = function (RED) {
         });
 
         node.hub.on("evt_strike", function (data) {
-            var msg = {
-                payload: {
-                    utcDate: new Date(data.payload.evt[0] * 1000),
-                    distance: data.payload.evt[1],
-                    energy: data.payload.evt[2]
-                },
-                originalMessage: data.payload,
-                remote: data.remote
-            };
+            try {
+                var msg = {
+                    payload: {
+                        utcDate: new Date(data.payload.evt[0] * 1000),
+                        distance: data.payload.evt[1],
+                        energy: data.payload.evt[2]
+                    },
+                    originalMessage: data.payload,
+                    remote: data.remote
+                };
 
-            node.send(msg);
+                node.send(msg);
+            } catch (error) {
+                node.error(error, data);
+            }
         });
     }
 

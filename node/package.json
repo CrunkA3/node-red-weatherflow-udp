@@ -3,7 +3,8 @@
     "node-red" : {
         "nodes": {
             "weatherflow-hub": "weatherflow-hub.js",
-            "weatherflow-rapid-wind": "weatherflow-rapid-wind.js"
+            "weatherflow-rapid-wind": "weatherflow-rapid-wind.js",
+            "weatherflow-observation": "weatherflow-observation.js"
         }
     }
 }

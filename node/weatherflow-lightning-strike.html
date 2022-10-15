@@ -1,0 +1,65 @@
+<script type="text/javascript">
+    RED.nodes.registerType('weatherflow-lightning-strike', {
+        category: 'WeatherFlow',
+        color: '#c498cd',
+        inputs: 0,
+        outputs: 1,
+        defaults: {
+            hub: { value: "", type: "weatherflow-hub" }
+        },
+        icon: "bridge.svg",
+        label: function () {
+            return this.name || "Lightning Strike";
+        },
+        paletteLabel: "Lightning Strike"
+    })
+</script>
+
+<script type="text/html" data-template-name="weatherflow-rain-start">
+    <div class="form-row">
+        <label for="node-input-hub"><i class="fa fa-tag"></i> Hub</label>
+        <input type="text" id="node-input-hub" placeholder="Hub">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="weatherflow-rain-start">
+    <p>Receives lightning strike messages</p>
+    <h3>Outputs</h3>
+    <ol class="node-ports">
+        <li>Standard output
+            <dl class="message-properties">
+                <dt>payload <span class="property-type">json</span></dt>
+                <dd>the lightning strike event data
+                    <code>
+                        {
+                            "utcDate":"2022-10-15T15:28:06.000Z",
+                            "distance":27,
+                            "energy":3848
+                        }
+                    </code>
+                </dd>   
+                <dt>originalMessage <span class="property-type">json</span></dt>
+                <dd>the rapid wind original message
+                    <code>
+                        {
+                            "serial_number": "AR-00004049",
+                            "type":"evt_strike",
+                            "hub_sn": "HB-00000001",
+                            "evt":[1493322445,27,3848]
+                          }
+                    </code>
+                </dd>
+                <dd>the remote host
+                    <code>
+                        {
+                            "address":"192.168.1.100",
+                            "family":"IPv4",
+                            "port":50222,
+                            "size":101
+                        }
+                    </code>
+                </dd>
+            </dl>
+        </li>
+    </ol>
+</script>

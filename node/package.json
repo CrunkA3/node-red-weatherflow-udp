@@ -6,6 +6,7 @@
             "weatherflow-rapid-wind": "weatherflow-rapid-wind.js",
             "weatherflow-observation-tempest": "weatherflow-observation-tempest.js",
             "weatherflow-observation-air": "weatherflow-observation-air.js",
+            "weatherflow-observation-sky": "weatherflow-observation-sky.js",
             "weatherflow-rain-start": "weatherflow-rain-start.js",
             "weatherflow-lightning-strike": "weatherflow-lightning-strike.js"
         }

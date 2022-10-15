@@ -40,6 +40,9 @@ module.exports = function (RED) {
             else if (messageObject.type == "obs_air") {
                 node.emit("obs_air", { payload: messageObject, remote: remote });
             }
+            else if (messageObject.type == "obs_sky") {
+                node.emit("obs_sky", { payload: messageObject, remote: remote });
+            }
             else if (messageObject.type == "evt_precip") {
                 node.emit("evt_precip", { payload: messageObject, remote: remote });
             }

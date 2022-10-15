@@ -1,0 +1,77 @@
+<script type="text/javascript">
+    RED.nodes.registerType('weatherflow-observation-sky', {
+        category: 'WeatherFlow',
+        color: '#c498cd',
+        inputs: 0,
+        outputs: 1,
+        defaults: {
+            hub: { value: "", type: "weatherflow-hub" }
+        },
+        icon: "bridge.svg",
+        label: function () {
+            return this.name || "Observation (Sky)";
+        },
+        paletteLabel: "Observation (Sky)"
+    })
+</script>
+
+<script type="text/html" data-template-name="weatherflow-observation-sky">
+    <div class="form-row">
+        <label for="node-input-hub"><i class="fa fa-tag"></i> Hub</label>
+        <input type="text" id="node-input-hub" placeholder="Hub">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="weatherflow-observation-sky">
+    <p>Receives sky observation messages</p>
+    <h3>Outputs</h3>
+    <ol class="node-ports">
+        <li>Standard output
+            <dl class="message-properties">
+                <dt>payload <span class="property-type">json</span></dt>
+                <dd>the air observation data
+                    <code>
+                        {
+                            "utcDate":"2022-10-15T15:28:06.000Z",
+                            "illuminance": 9000,
+                            "uvIndex": 10,
+                            "rainAmountOverPreviousMinute": 0:0,
+                            "windLull": 2.6,
+                            "windAvg": 4.6,
+                            "windGust": 7.4,
+                            "windDirection": 187,
+                            "batteryVoltage": 3.12,
+                            "reportInterval": 1,
+                            "solarRadiation": 130,
+                            "localDayRainAccumulation": null,
+                            "precipitationType": 0,
+                            "windSampleInterval": 3
+                        }
+                    </code>
+                </dd>   
+                <dt>originalMessage <span class="property-type">json</span></dt>
+                <dd>the air observation original message
+                    <code>
+                        {
+                            "serial_number": "SK-00008453",
+                            "type":"obs_sky",
+                            "hub_sn": "HB-00000001",
+                            "obs":[[1493321340,9000,10,0.0,2.6,4.6,7.4,187,3.12,1,130,null,0,3]],
+                            "firmware_revision": 29
+                          }
+                    </code>
+                </dd>
+                <dd>the remote host
+                    <code>
+                        {
+                            "address":"192.168.1.100",
+                            "family":"IPv4",
+                            "port":50222,
+                            "size":101
+                        }
+                    </code>
+                </dd>
+            </dl>
+        </li>
+    </ol>
+</script>

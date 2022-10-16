@@ -29,46 +29,53 @@
         <li>Standard output
             <dl class="message-properties">
                 <dt>payload <span class="property-type">json</span></dt>
-                <dd>the air observation data
+                <dd>the sky observation data
                     <code>
-                        {
-                            "utcDate":"2022-10-15T15:28:06.000Z",
-                            "illuminance": 9000,
-                            "uvIndex": 10,
-                            "rainAmountOverPreviousMinute": 0:0,
-                            "windLull": 2.6,
-                            "windAvg": 4.6,
-                            "windGust": 7.4,
-                            "windDirection": 187,
-                            "batteryVoltage": 3.12,
-                            "reportInterval": 1,
-                            "solarRadiation": 130,
-                            "localDayRainAccumulation": null,
-                            "precipitationType": 0,
-                            "windSampleInterval": 3
-                        }
+                        <pre>
+{
+    "utcDate":"2022-10-15T15:28:06.000Z",
+    "illuminance": 9000,
+    "uvIndex": 10,
+    "rainAmountOverPreviousMinute": 0:0,
+    "windLull": 2.6,
+    "windAvg": 4.6,
+    "windGust": 7.4,
+    "windDirection": 187,
+    "batteryVoltage": 3.12,
+    "reportInterval": 1,
+    "solarRadiation": 130,
+    "localDayRainAccumulation": null,
+    "precipitationType": 0,
+    "windSampleInterval": 3
+}
+                    </pre>
                     </code>
                 </dd>   
                 <dt>originalMessage <span class="property-type">json</span></dt>
-                <dd>the air observation original message
+                <dd>the sky observation original message
                     <code>
-                        {
-                            "serial_number": "SK-00008453",
-                            "type":"obs_sky",
-                            "hub_sn": "HB-00000001",
-                            "obs":[[1493321340,9000,10,0.0,2.6,4.6,7.4,187,3.12,1,130,null,0,3]],
-                            "firmware_revision": 29
-                          }
+                        <pre>
+{
+    "serial_number": "SK-00008453",
+    "type":"obs_sky",
+    "hub_sn": "HB-00000001",
+    "obs":[[1493321340,9000,10,0.0,2.6,4.6,7.4,187,3.12,1,130,null,0,3]],
+    "firmware_revision": 29
+}
+                        </pre>
                     </code>
                 </dd>
-                <dd>the remote host
-                    <code>
-                        {
-                            "address":"192.168.1.100",
-                            "family":"IPv4",
-                            "port":50222,
-                            "size":101
-                        }
+                <dt>remote <span class="property-type">json</span></dt>
+                <dd>the remote host<br/>
+                    <code data-lang="javascript">
+                        <pre>
+{
+    "address":"192.168.1.100",
+    "family":"IPv4",
+    "port":50222,
+    "size":101
+}
+                        </pre>
                     </code>
                 </dd>
             </dl>

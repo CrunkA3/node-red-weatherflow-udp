@@ -29,51 +29,58 @@
         <li>Standard output
             <dl class="message-properties">
                 <dt>payload <span class="property-type">json</span></dt>
-                <dd>the ovservation message<br/>
+                <dd>the ovservation data<br/>
                     <code data-lang="javascript">
-                        {<br/>
-                            "utcDate": "2022-10-15T15:28:06.000Z",<br/>
-                            "windLull": 0.18,<br/>
-                            "windAvg": 0.22,<br/>
-                            "windGust": 0.27,<br/>
-                            "windDirection": 144,<br/>
-                            "windSampleInterval": 6,<br/>
-                            "stationPressure": 1017.57,<br/>
-                            "airTemperature": 22.37,<br/>
-                            "relativeHumidity": 50.26,<br/>
-                            "illuminance": 328,<br/>
-                            "uvIndex": 0.03,<br/>
-                            "solarRadiation": 3,<br/>
-                            "rainAmountOverPreviousMinute": 0.000000,<br/>
-                            "precipitationType": 0,<br/>
-                            "lightningStrikeAvgDistance": 0,<br/>
-                            "lightningStrikeCount": 0,<br/>
-                            "batteryVoltage": 2.410,<br/>
-                            "reportInterval": 1<br/>
-                        }
+                        <pre>
+{
+    "utcDate": "2022-10-15T15:28:06.000Z",
+    "windLull": 0.18,
+    "windAvg": 0.22,
+    "windGust": 0.27,
+    "windDirection": 144,
+    "windSampleInterval": 6,
+    "stationPressure": 1017.57,
+    "airTemperature": 22.37,
+    "relativeHumidity": 50.26,
+    "illuminance": 328,
+    "uvIndex": 0.03,
+    "solarRadiation": 3,
+    "rainAmountOverPreviousMinute": 0.000000,
+    "precipitationType": 0,
+    "lightningStrikeAvgDistance": 0,
+    "lightningStrikeCount": 0,
+    "batteryVoltage": 2.410,
+    "reportInterval": 1
+}
+                        </pre>
                     </code>
                 </dd>                <dt>originalMessage <span class="property-type">json</span></dt>
-                <dd>the air observation original message<br/>
+                <dd>the tempest observation original message<br/>
                     <code data-lang="javascript">
-                        {<br/>
-                            "serial_number": "ST-00000001",<br/>
-                            "type": "obs_st",<br/>
-                            "hub_sn": "HB-00000001",<br/>
-                            "obs": [<br/>
-                                [1588948614,0.18,0.22,0.27,144,6,1017.57,22.37,50.26,328,0.03,3,0.000000,0,0,0,2.410,1]<br/>
-                            ],<br/>
-                            "firmware_revision": 129<br/>
-                        }
+                        <pre>
+{
+    "serial_number": "ST-00000001",
+    "type": "obs_st",
+    "hub_sn": "HB-00000001",
+    "obs": [
+    [1588948614,0.18,0.22,0.27,144,6,1017.57,22.37,50.26,328,0.03,3,0.000000,0,0,0,2.410,1]
+    ],
+    "firmware_revision": 129
+}
+                        </pre>
                     </code>
                 </dd>
+                <dt>remote <span class="property-type">json</span></dt>
                 <dd>the remote host<br/>
                     <code data-lang="javascript">
-                        {<br/>
-                            "address":"192.168.1.100",<br/>
-                            "family":"IPv4",<br/>
-                            "port":50222,<br/>
-                            "size":101<br/>
-                        }
+                        <pre>
+{
+    "address":"192.168.1.100",
+    "family":"IPv4",
+    "port":50222,
+    "size":101
+}
+                        </pre>
                     </code>
                 </dd>
             </dl>

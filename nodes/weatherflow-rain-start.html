@@ -29,32 +29,39 @@
         <li>Standard output
             <dl class="message-properties">
                 <dt>payload <span class="property-type">json</span></dt>
-                <dd>the repid wind observation data
+                <dd>the rain start event data
                     <code>
-                        {
-                            "utcDate":"2022-10-15T15:28:06.000Z"
-                        }
+                        <pre>
+{
+    "utcDate":"2022-10-15T15:28:06.000Z"
+}
+                        </pre>
                     </code>
                 </dd>   
                 <dt>originalMessage <span class="property-type">json</span></dt>
-                <dd>the rapid wind original message
+                <dd>the rain start original message
                     <code>
-                        {
-                            "serial_number":"SK-00008453",
-                            "type":"evt_precip",
-                            "hub_sn":"HB-00000001",
-                            "ev":[1665847686]
-                        }
+                        <pre>
+{
+    "serial_number":"SK-00008453",
+    "type":"evt_precip",
+    "hub_sn":"HB-00000001",
+    "ev":[1665847686]
+}
+                        </pre>
                     </code>
                 </dd>
-                <dd>the remote host
-                    <code>
-                        {
-                            "address":"192.168.1.100",
-                            "family":"IPv4",
-                            "port":50222,
-                            "size":101
-                        }
+                <dt>remote <span class="property-type">json</span></dt>
+                <dd>the remote host<br/>
+                    <code data-lang="javascript">
+                        <pre>
+{
+    "address":"192.168.1.100",
+    "family":"IPv4",
+    "port":50222,
+    "size":101
+}
+                        </pre>
                     </code>
                 </dd>
             </dl>

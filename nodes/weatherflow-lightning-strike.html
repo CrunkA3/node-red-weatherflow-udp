@@ -31,32 +31,39 @@
                 <dt>payload <span class="property-type">json</span></dt>
                 <dd>the lightning strike event data
                     <code>
-                        {
-                            "utcDate":"2022-10-15T15:28:06.000Z",
-                            "distance":27,
-                            "energy":3848
-                        }
+                        <pre>
+{
+    "utcDate":"2022-10-15T15:28:06.000Z",
+    "distance":27,
+    "energy":3848
+}
+                        </pre>
                     </code>
                 </dd>   
                 <dt>originalMessage <span class="property-type">json</span></dt>
-                <dd>the rapid wind original message
+                <dd>the lightning strike original message
                     <code>
-                        {
-                            "serial_number": "AR-00004049",
-                            "type":"evt_strike",
-                            "hub_sn": "HB-00000001",
-                            "evt":[1493322445,27,3848]
-                          }
+                        <pre>
+{
+    "serial_number": "AR-00004049",
+    "type":"evt_strike",
+    "hub_sn": "HB-00000001",
+    "evt":[1493322445,27,3848]
+}
+                        </pre>
                     </code>
                 </dd>
-                <dd>the remote host
-                    <code>
-                        {
-                            "address":"192.168.1.100",
-                            "family":"IPv4",
-                            "port":50222,
-                            "size":101
-                        }
+                <dt>remote <span class="property-type">json</span></dt>
+                <dd>the remote host<br/>
+                    <code data-lang="javascript">
+                        <pre>
+{
+    "address":"192.168.1.100",
+    "family":"IPv4",
+    "port":50222,
+    "size":101
+}
+                        </pre>
                     </code>
                 </dd>
             </dl>

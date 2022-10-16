@@ -29,40 +29,47 @@
         <li>Standard output
             <dl class="message-properties">
                 <dt>payload <span class="property-type">json</span></dt>
-                <dd>the air Observation data
+                <dd>the air observation data
                     <code>
-                        {
-                            "utcDate":"2022-10-15T15:28:06.000Z",
-                            "stationPressure": 835.0,
-                            "airTemperature": 10.0,
-                            "relativeHumidity": 45,
-                            "lightningStrikeCount": 0,
-                            "lightningStrikeAvgDistance": 0,
-                            "batteryVoltage": 3.46,
-                            "reportInterval": 1
-                        }
+                        <pre>
+{
+    "utcDate":"2022-10-15T15:28:06.000Z",
+    "stationPressure": 835.0,
+    "airTemperature": 10.0,
+    "relativeHumidity": 45,
+    "lightningStrikeCount": 0,
+    "lightningStrikeAvgDistance": 0,
+    "batteryVoltage": 3.46,
+    "reportInterval": 1
+}
+                    </pre>
                     </code>
                 </dd>   
                 <dt>originalMessage <span class="property-type">json</span></dt>
-                <dd>the rapid wind original message
+                <dd>the air observation original message
                     <code>
-                        {
-                            "serial_number": "AR-00004049",
-                            "type":"obs_air",
-                            "hub_sn": "HB-00000001",
-                            "obs":[[1493164835,835.0,10.0,45,0,0,3.46,1]],
-                            "firmware_revision": 17
-                        }
+                        <pre>
+{
+    "serial_number": "AR-00004049",
+    "type":"obs_air",
+    "hub_sn": "HB-00000001",
+    "obs":[[1493164835,835.0,10.0,45,0,0,3.46,1]],
+    "firmware_revision": 17
+}
+                        </pre>
                     </code>
                 </dd>
-                <dd>the remote host
-                    <code>
-                        {
-                            "address":"192.168.1.100",
-                            "family":"IPv4",
-                            "port":50222,
-                            "size":101
-                        }
+                <dt>remote <span class="property-type">json</span></dt>
+                <dd>the remote host<br/>
+                    <code data-lang="javascript">
+                        <pre>
+{
+    "address":"192.168.1.100",
+    "family":"IPv4",
+    "port":50222,
+    "size":101
+}
+                        </pre>
                     </code>
                 </dd>
             </dl>

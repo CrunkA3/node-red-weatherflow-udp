@@ -31,32 +31,39 @@
                 <dt>payload <span class="property-type">json</span></dt>
                 <dd>the repid wind observation data
                     <code>
-                        {
-                            "utcDate":"2022-10-15T15:28:06.000Z",
-                            "windSpeed":0.88,
-                            "windDirection":189
-                        }
+                        <pre>
+{
+    "utcDate":"2022-10-15T15:28:06.000Z",
+    "windSpeed":0.88,
+    "windDirection":189
+}
+                        </pre>
                     </code>
                 </dd>   
                 <dt>originalMessage <span class="property-type">json</span></dt>
                 <dd>the rapid wind original message
                     <code>
-                        {
-                            "serial_number":"ST-00000001",
-                            "type":"rapid_wind",
-                            "hub_sn":"HB-00000001",
-                            "ob":[1665847686,0.88,189]
-                        }
+                        <pre>
+{
+    "serial_number":"ST-00000001",
+    "type":"rapid_wind",
+    "hub_sn":"HB-00000001",
+    "ob":[1665847686,0.88,189]
+}
+                        </pre>
                     </code>
                 </dd>
-                <dd>the remote host
-                    <code>
-                        {
-                            "address":"192.168.1.100",
-                            "family":"IPv4",
-                            "port":50222,
-                            "size":101
-                        }
+                <dt>remote <span class="property-type">json</span></dt>
+                <dd>the remote host<br/>
+                    <code data-lang="javascript">
+                        <pre>
+{
+    "address":"192.168.1.100",
+    "family":"IPv4",
+    "port":50222,
+    "size":101
+}
+                        </pre>
                     </code>
                 </dd>
             </dl>

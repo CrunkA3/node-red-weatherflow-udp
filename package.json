@@ -15,13 +15,13 @@
     "node-red": {
         "version": ">=1.2.9",
         "nodes": {
-            "weatherflow-hub": "weatherflow-hub.js",
-            "weatherflow-rapid-wind": "weatherflow-rapid-wind.js",
-            "weatherflow-observation-tempest": "weatherflow-observation-tempest.js",
-            "weatherflow-observation-air": "weatherflow-observation-air.js",
-            "weatherflow-observation-sky": "weatherflow-observation-sky.js",
-            "weatherflow-rain-start": "weatherflow-rain-start.js",
-            "weatherflow-lightning-strike": "weatherflow-lightning-strike.js"
+            "weatherflow-hub": "nodes/weatherflow-hub.js",
+            "weatherflow-rapid-wind": "nodes/weatherflow-rapid-wind.js",
+            "weatherflow-observation-tempest": "nodes/weatherflow-observation-tempest.js",
+            "weatherflow-observation-air": "nodes/weatherflow-observation-air.js",
+            "weatherflow-observation-sky": "nodes/weatherflow-observation-sky.js",
+            "weatherflow-rain-start": "nodes/weatherflow-rain-start.js",
+            "weatherflow-lightning-strike": "nodes/weatherflow-lightning-strike.js"
         }
     },
     "engines": {
@@ -32,8 +32,9 @@
     },
     "keywords": [
         "weatherflow",
-        "weahter",
+        "weather",
         "weather-station",
+        "tempest",
         "node-red"
     ]
 }

@@ -3,7 +3,7 @@ function Get-ScriptDirectory {
 }
   
 $sourcePath = Get-ScriptDirectory
-$sourcePath = $sourcePath + "\node\"
+$sourcePath = $sourcePath
 Write-Output($sourcePath)
 
 Write-Output("_______________________")

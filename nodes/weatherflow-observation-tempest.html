@@ -1,0 +1,82 @@
+<script type="text/javascript">
+    RED.nodes.registerType('weatherflow-observation-tempest', {
+        category: 'WeatherFlow',
+        color: '#c498cd',
+        inputs: 0,
+        outputs: 1,
+        defaults: {
+            hub: { value: "", type: "weatherflow-hub" }
+        },
+        icon: "bridge.svg",
+        label: function () {
+            return this.name || "Observation (Tempest)";
+        },
+        paletteLabel: "Observation (Tempest)"
+    })
+</script>
+
+<script type="text/html" data-template-name="weatherflow-observation-tempest">
+    <div class="form-row">
+        <label for="node-input-hub"><i class="fa fa-tag"></i> Hub</label>
+        <input type="text" id="node-input-hub" placeholder="Hub">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="weatherflow-observation-tempest">
+    <p>Receives rapid wind messages</p>
+    <h3>Outputs</h3>
+    <ol class="node-ports">
+        <li>Standard output
+            <dl class="message-properties">
+                <dt>payload <span class="property-type">json</span></dt>
+                <dd>the ovservation message<br/>
+                    <code data-lang="javascript">
+                        {<br/>
+                            "utcDate": "2022-10-15T15:28:06.000Z",<br/>
+                            "windLull": 0.18,<br/>
+                            "windAvg": 0.22,<br/>
+                            "windGust": 0.27,<br/>
+                            "windDirection": 144,<br/>
+                            "windSampleInterval": 6,<br/>
+                            "stationPressure": 1017.57,<br/>
+                            "airTemperature": 22.37,<br/>
+                            "relativeHumidity": 50.26,<br/>
+                            "illuminance": 328,<br/>
+                            "uvIndex": 0.03,<br/>
+                            "solarRadiation": 3,<br/>
+                            "rainAmountOverPreviousMinute": 0.000000,<br/>
+                            "precipitationType": 0,<br/>
+                            "lightningStrikeAvgDistance": 0,<br/>
+                            "lightningStrikeCount": 0,<br/>
+                            "batteryVoltage": 2.410,<br/>
+                            "reportInterval": 1<br/>
+                        }
+                    </code>
+                </dd>                <dt>originalMessage <span class="property-type">json</span></dt>
+                <dd>the air observation original message<br/>
+                    <code data-lang="javascript">
+                        {<br/>
+                            "serial_number": "ST-00000001",<br/>
+                            "type": "obs_st",<br/>
+                            "hub_sn": "HB-00000001",<br/>
+                            "obs": [<br/>
+                                [1588948614,0.18,0.22,0.27,144,6,1017.57,22.37,50.26,328,0.03,3,0.000000,0,0,0,2.410,1]<br/>
+                            ],<br/>
+                            "firmware_revision": 129<br/>
+                        }
+                    </code>
+                </dd>
+                <dd>the remote host<br/>
+                    <code data-lang="javascript">
+                        {<br/>
+                            "address":"192.168.1.100",<br/>
+                            "family":"IPv4",<br/>
+                            "port":50222,<br/>
+                            "size":101<br/>
+                        }
+                    </code>
+                </dd>
+            </dl>
+        </li>
+    </ol>
+</script>

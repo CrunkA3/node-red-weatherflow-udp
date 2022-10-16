@@ -9,8 +9,8 @@
 This package contains nodes for listening to WeahterFlow Tempest UDP API:
 <https://weatherflow.github.io/Tempest/api/udp/v171/>
 
-# Install
+## Install
 
-```
+```text
 npm install node-red-contrib-weatherflow-udp
 ```
